@@ -2,43 +2,45 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
-    <main>
-        <section class="row" aria-labelledby="aspnetTitle">
-            <h1 id="aspnetTitle">ASP.NET</h1>
-            <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS, and JavaScript.</p>
-            <p><a href="http://www.asp.net" class="btn btn-primary btn-md">Learn more &raquo;</a></p>
-        </section>
+                                 <%--corrousel--%>
 
-        <div class="row">
-            <section class="col-md-4" aria-labelledby="gettingStartedTitle">
-                <h2 id="gettingStartedTitle">Getting started</h2>
-                <p>
-                    ASP.NET Web Forms lets you build dynamic websites using a familiar drag-and-drop, event-driven model.
-                A design surface and hundreds of controls and components let you rapidly build sophisticated, powerful UI-driven sites with data access.
-                </p>
-                <p>
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301948">Learn more &raquo;</a>
-                </p>
-            </section>
-            <section class="col-md-4" aria-labelledby="librariesTitle">
-                <h2 id="librariesTitle">Get more libraries</h2>
-                <p>
-                    NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.
-                </p>
-                <p>
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301949">Learn more &raquo;</a>
-                </p>
-            </section>
-            <section class="col-md-4" aria-labelledby="hostingTitle">
-                <h2 id="hostingTitle">Web Hosting</h2>
-                <p>
-                    You can easily find a web hosting company that offers the right mix of features and price for your applications.
-                </p>
-                <p>
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301950">Learn more &raquo;</a>
-                </p>
-            </section>
-        </div>
-    </main>
+         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+       <div class="carousel-inner">
+         <div class="carousel-item active" data-bs-interval="3000">
+           <img src="img/Samsung1.jpg" class="d-block w-100" alt="...">
+         </div>
+
+         <div class="carousel-item" data-bs-interval="3000">
+           <img src="img/Samsung2.jpg" class="d-block w-100" alt="...">
+         </div>
+
+         <div class="carousel-item" data-bs-interval="3000">
+           <img src="img/Samsung3.jpg" class="d-block w-100" alt="...">
+         </div>
+                    
+         <div class="carousel-item" data-bs-interval="3000">
+           <img src="img/Samsung4.jpg" class="d-block w-100" alt="...">
+         </div>
+       </div>
+
+       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+         <span class="visually-hidden">Previous</span>
+       </button>
+       <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+         <span class="carousel-control-next-icon" aria-hidden="true"></span>
+         <span class="visually-hidden">Next</span>
+       </button>
+     </div>
+
+                                 <%--Tarjetas--%>
+
+    <div class="card mb-3" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Special title treatment</h5>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
 
 </asp:Content>
