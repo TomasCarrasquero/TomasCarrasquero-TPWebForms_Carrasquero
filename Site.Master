@@ -38,13 +38,12 @@
             </Scripts>
         </asp:ScriptManager>
 
-        <%--<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark">
-            <div class="container">--%>
+
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
           <div class="container-fluid">
-                <%--<a class="navbar-brand" runat="server" href="~/">ComprasWeb.com</a>--%>
+             
               <a class="navbar-brand" href="#">
-                    <img src="\Img\—Pngtree—online shopping e-commerce with cellphone_5347885 (1).png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">ComprasWeb.com</a>
+                    <img src="\Img\PageIcon.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">ComprasWeb.com</a>
                 <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" title="Alternar navegación" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>

@@ -5,9 +5,9 @@ VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPWebForms_Carrasquero", "TPWebForms_Carrasquero.csproj", "{057B3EEF-57BB-4EE6-981A-2550E79F9CE8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dominio", "dominio\dominio.csproj", "{0B189EEC-F471-4E9D-8B0F-DB37F3409A1A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dominio", "dominio\Dominio.csproj", "{0B189EEC-F471-4E9D-8B0F-DB37F3409A1A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "negocio", "negocio\negocio.csproj", "{F2D070F9-6FE7-4C4B-99AA-614A8A3A4D9A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Negocio", "negocio\Negocio.csproj", "{F2D070F9-6FE7-4C4B-99AA-614A8A3A4D9A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
