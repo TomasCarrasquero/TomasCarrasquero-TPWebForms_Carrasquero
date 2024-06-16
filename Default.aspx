@@ -47,18 +47,11 @@
                     <h5 class="card-title"><%= art.marca %></h5>
                     <h5 class="card-title"><%= string.Format("{0:C}", art.precio) %></h5>
                 </div>
-                    <div class="btn-group">
-               <%-- <div class="d-grid gap-2 col-4 mx-auto">
-                    <a href="CarroCompras.aspx?idArticulo=<%=art.id.ToString() %>" class="btn btn-success"><i class="bi bi-cart3"></i>Agregar</a>
-                    <a href="DetalleArticulo.aspx?idArticulo=<%=art.id.ToString() %>" class="btn btn-info">Detalle</a>
-                    <br/>
-                </div>--%>
-  <a href="CarroCompras.aspx?idArticulo=<%=art.id.ToString() %>" class="btn btn-primary active" aria-current="page">Agregar</a>
-  <a href="CarroCompras.aspx?idArticulo=<%=art.id.ToString() %>" class="btn btn-primary">Detalles</a>
-  
-</div>
-                        <br />
-
+                <div class="btn-group">
+                    <a href="CarroCompras.aspx?idArticulo=<%=art.id.ToString() %>" class="btn btn-primary active" aria-current="page">Agregar</a>
+                    <a href="CarroCompras.aspx?idArticulo=<%=art.id.ToString() %>" class="btn btn-primary">Detalles</a>
+                </div>
+                <br />
             </div>
         </div>
 
