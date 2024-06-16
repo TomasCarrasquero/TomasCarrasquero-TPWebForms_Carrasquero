@@ -17,9 +17,7 @@ namespace TPWebForms_Carrasquero
         {
             ArticuloNegocio negocio = new ArticuloNegocio();
             ListaArticulo = negocio.listar();
-            repRepetidor.DataSource = ListaArticulo;
-            repRepetidor.DataBind();
-            //if (!IsPostBack)
+            ////if (!IsPostBack)
             //{
             //    repRepetidor.DataSource = ListaArticulo;
             //    repRepetidor.DataBind();

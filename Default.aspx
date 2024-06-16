@@ -34,21 +34,35 @@
     </div>
 
     <%--Tarjetas--%>
-    <div class="row pl-3">
-        <asp:Repeater runat="server" ID="repRepetidor">
-            <ItemTemplate>
-                <div class="col">
-                    <div class="card">
-                        <img src="<%#Eval("Imagen") %>" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title"><%#Eval("nombre") %></h5>
-                            <p class="card-text"><%#Eval("descripcion") %></p>
-                            <a href="DetallePokemon.aspx?id=<%#Eval("Id") %>">Ver Detalle</a>
-                            <%--<asp:Button Text="Ejemplo" CssClass="btn btn-primary" runat="server" ID="btnEjemplo" CommandArgument='<%#Eval("Id") %>' CommandName="PokemonId" OnClick="btnEjemplo_Click" />--%>
-                        </div>
-                    </div>
+
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <%foreach (dominio.Articulo art in ListaArticulo)
+            {%>
+
+        <div class="col-12 col-sm-6 col-md-8 col-lg-3 mb-3">
+            <div class="card text-center h-100 cardstyle">
+                <img src="<%:art.imagen.UrlImagen %>" class="img-fluid0" alt="Imagen no disponible" />
+                <div class="card-body flex-column">
+                    <h5 class="card-title"><%:art.nombre %></h5>
+                    <h5 class="card-title"><%= art.marca %></h5>
+                    <h5 class="card-title"><%= string.Format("{0:C}", art.precio) %></h5>
                 </div>
-            </ItemTemplate>
-        </asp:Repeater>
+                    <div class="btn-group">
+               <%-- <div class="d-grid gap-2 col-4 mx-auto">
+                    <a href="CarroCompras.aspx?idArticulo=<%=art.id.ToString() %>" class="btn btn-success"><i class="bi bi-cart3"></i>Agregar</a>
+                    <a href="DetalleArticulo.aspx?idArticulo=<%=art.id.ToString() %>" class="btn btn-info">Detalle</a>
+                    <br/>
+                </div>--%>
+  <a href="CarroCompras.aspx?idArticulo=<%=art.id.ToString() %>" class="btn btn-primary active" aria-current="page">Agregar</a>
+  <a href="CarroCompras.aspx?idArticulo=<%=art.id.ToString() %>" class="btn btn-primary">Detalles</a>
+  
+</div>
+                        <br />
+
+            </div>
+        </div>
+
+        <%}%>
     </div>
+
 </asp:Content>
