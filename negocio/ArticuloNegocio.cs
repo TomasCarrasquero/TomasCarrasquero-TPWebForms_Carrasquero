@@ -56,7 +56,7 @@ namespace negocio
             {
                 datos.cerrarConexion();
             }
-            
+
             return lista;
         }
 
@@ -342,7 +342,7 @@ namespace negocio
             }
         }
 
-        public void eliminarImagen (int idImagen)
+        public void eliminarImagen(int idImagen)
         {
             AccesoDatos datos = new AccesoDatos();
 

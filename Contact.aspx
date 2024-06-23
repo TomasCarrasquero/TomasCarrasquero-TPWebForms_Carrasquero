@@ -12,8 +12,8 @@
         </address>
 
         <address>
-            <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-            <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
+            <strong>Soporte:</strong>   <a href="mailto:tomas.carrasquero@alumnos.frgp.utn.edu.ar">carrasquero@alumnos.frgp.utn.edu.ar</a><br />
+            <strong>Marketing:</strong> <a href="mailto:tomas.carrasquero@outlook.com">tomas.carrasquero@outlook.com</a>
         </address>
     </main>
 </asp:Content>

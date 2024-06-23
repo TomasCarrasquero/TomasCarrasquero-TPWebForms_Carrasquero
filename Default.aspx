@@ -32,6 +32,29 @@
             <span class="visually-hidden">Next</span>
         </button>
     </div>
+    <br />
+    <% if (ListaArticulo.Count == 0)          //si no hay ningun articulo que coincida con la busuqeda
+        {%>
+    <br />
+    <div class="container px-4">
+        <div class="row gx-5">
+            <div class="col12 col-sm-6">
+                <div class="p-3 border bg-light">
+                    <img src="Img/sorry.jpg" class="card-img-top" alt="...">
+                </div>
+            </div>
+            <div class="col12 col-sm-6 text-center">
+                <div class="p-3 border bg-light ">
+                    <h1 style="color: brown">Al parecer no hay articulos que coincidan con tu busqueda</h1>
+                </div>
+                <br />
+                <a href="Default.aspx" class="btn btn-success btn lg">Ver mas Articulos</a>
+            </div>
+        </div>
+    </div>
+
+    <%}%>
+
 
     <%--Tarjetas--%>
 
@@ -40,16 +63,16 @@
             {%>
 
         <div class="col-12 col-sm-6 col-md-8 col-lg-3 mb-3">
-            <div class="card text-center h-100 cardstyle">
+            <div class="card text-center h-100 cardstyle">                  
                 <img src="<%:art.imagen.UrlImagen %>" class="img-fluid0" alt="Imagen no disponible" />
                 <div class="card-body flex-column">
                     <h5 class="card-title"><%:art.nombre %></h5>
                     <h5 class="card-title"><%= art.marca %></h5>
-                    <h5 class="card-title"><%= string.Format("{0:C}", art.precio) %></h5>
+                    <h5 class="card-title"><%= string.Format("{0:C2}", art.precio) %></h5>
                 </div>
                 <div class="btn-group">
                     <a href="CarroCompras.aspx?idArticulo=<%=art.id.ToString() %>" class="btn btn-primary active" aria-current="page">Agregar</a>
-                    <a href="CarroCompras.aspx?idArticulo=<%=art.id.ToString() %>" class="btn btn-primary">Detalles</a>
+                    <a href="DetalleProducto.aspx?idArticulo=<%=art.id.ToString() %>" class="btn btn-primary">Detalles</a>
                 </div>
                 <br />
             </div>

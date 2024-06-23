@@ -13,9 +13,9 @@
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
 
-    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <webopt:BundleReference runat="server" Path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body>
     <form runat="server">
@@ -38,22 +38,26 @@
             </Scripts>
         </asp:ScriptManager>
 
-
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-          <div class="container-fluid">
-             
-              <a class="navbar-brand" href="#">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="default.aspx">
                     <img src="\Img\PageIcon.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">ComprasWeb.com</a>
-                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" title="Alternar navegación" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item"><a class="nav-link" runat="server" href="~/">Inicio</a></li>
-                        <li class="nav-item"><a class="nav-link" runat="server" href="~/About">Acerca de</a></li>
-                        <li class="nav-item"><a class="nav-link" runat="server" href="~/Contact">Contacto</a></li>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="About.aspx">Acerca de</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Contact.aspx">Contacto</a>
+                        </li>
                     </ul>
+                    <%--<asp:Button ID="btnBuscar" runat="server" OnClick="btnBuscar_Click" CssClass="btn btn-outline-success" Text="Buscar" />--%>
+                    <asp:TextBox ID="txtBuscar" CssClass="form-control me-2" type="search" placeholder="Buscar" aria-label="Search" runat="server" AutoPostBack="true" OnTextChanged="txtBuscar_TextChange"></asp:TextBox>                       
+                    <a class="btn btn-primary" href="CarroCompras.aspx"><i><i class="bi bi-cart4"></i>(<%=cont%>)</i></a>
                 </div>
             </div>
         </nav>
@@ -61,10 +65,10 @@
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
             <hr />
-            <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - Programación 3 Primer cuatrimestre</p>
-            </footer>
         </div>
+            <footer>
+
+            </footer>
     </form>
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/Scripts/bootstrap.js") %>

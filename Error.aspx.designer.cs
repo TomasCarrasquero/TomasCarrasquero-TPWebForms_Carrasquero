@@ -11,7 +11,7 @@ namespace TPWebForms_Carrasquero
 {
 
 
-    public partial class Detalles
+    public partial class Error
     {
     }
 }
