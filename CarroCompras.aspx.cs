@@ -13,10 +13,9 @@ namespace TPWebForms_Carrasquero
     {
 
         public Articulo articuloNuevo { get; set; }
-        //public List<Articulo> carritoCompra = null;
         public List<Articulo> carritoCompra;
         private int idArticulo = 0;
-        decimal total = 0;
+        public decimal total = 0;
         protected void Page_Load(object sender, EventArgs e)
         {
             carritoCompra = new List<Articulo>();
@@ -24,31 +23,35 @@ namespace TPWebForms_Carrasquero
             {
                 Session.Add("carrito", new List<Articulo>());
             }
-
-            if (Request.QueryString["idArticulo"] != null)
+            if ( !IsPostBack )
             {
-                try
+                if (Request.QueryString["idArticulo"] != null)
                 {
-                    idArticulo = Convert.ToInt32(Request.QueryString["idArticulo"]);
-                    articuloNuevo = new Articulo();
-                    ArticuloNegocio auxNegocio = new ArticuloNegocio();
-                    articuloNuevo = auxNegocio.listar().Find(x => x.id == idArticulo);  // le asigna a la variable articulonuevo  el id encontrado
-                    carritoCompra = (List<Articulo>)Session["carrito"];
-                    carritoCompra.Add(articuloNuevo);
-                    Session.Add("carrito", carritoCompra);             //agregamos a la lista secion "carrito" con el nuevo articulo 
+                    try
+                    {
+                        idArticulo = Convert.ToInt32(Request.QueryString["idArticulo"]);
+                        articuloNuevo = new Articulo();
+                        ArticuloNegocio auxNegocio = new ArticuloNegocio();
+                        articuloNuevo = auxNegocio.listar().Find(x => x.id == idArticulo);  // le asigna a la variable articulonuevo  el id encontrado
+                        carritoCompra = (List<Articulo>)Session["carrito"];
+                        carritoCompra.Add(articuloNuevo);
+                        Session.Add("carrito", carritoCompra);             //agregamos a la lista secion "carrito" con el nuevo articulo 
 
-                }
-                catch (Exception)
-                {
-                    Response.Redirect("Error.aspx");
-                }
+                    }
+                    catch (Exception)
+                    {
+                        Response.Redirect("Error.aspx");
+                    }
 
+                }         
             }
+           
 
             if (Request.QueryString["idCant"] != null)
             {
                 try
                 {
+
                     idArticulo = Convert.ToInt32(Request.QueryString["idCant"]);
                     carritoCompra = (List<Articulo>)Session["carrito"];
                     carritoCompra.Add(carritoCompra.Find(x => idArticulo == x.id));
