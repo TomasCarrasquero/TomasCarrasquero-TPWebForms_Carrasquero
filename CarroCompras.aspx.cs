@@ -13,9 +13,9 @@ namespace TPWebForms_Carrasquero
     {
 
         public Articulo articuloNuevo { get; set; }
-        public List<Articulo> carritoCompra;
         private int idArticulo = 0;
         public decimal total = 0;
+        public List<Articulo> carritoCompra;
         protected void Page_Load(object sender, EventArgs e)
         {
             carritoCompra = new List<Articulo>();
@@ -34,9 +34,9 @@ namespace TPWebForms_Carrasquero
                         ArticuloNegocio auxNegocio = new ArticuloNegocio();
                         articuloNuevo = auxNegocio.listar().Find(x => x.id == idArticulo);  // le asigna a la variable articulonuevo  el id encontrado
                         carritoCompra = (List<Articulo>)Session["carrito"];
+
                         carritoCompra.Add(articuloNuevo);
                         Session.Add("carrito", carritoCompra);             //agregamos a la lista secion "carrito" con el nuevo articulo 
-
                     }
                     catch (Exception)
                     {
